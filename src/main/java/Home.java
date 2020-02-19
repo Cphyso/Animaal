@@ -1,27 +1,26 @@
 import java.util.ArrayList;
 
-public class Home{
+public class Home {
 
-//   private static int countObjects = 0;
-//    Home(){S
-//        countObjects++;
-//        System.out.println(countObjects);
-//    }
-    private ArrayList<Animal> homeAnimals = new ArrayList<>();
+    ArrayList<Animal> pets = new ArrayList<>();
 
-    void adoptPet(Animal animal){
-        if(homeAnimals.contains(animal)){
-            System.out.println("cant adopt the same animal twice! ");
-        }
-        else{
-            homeAnimals.add(animal);
-        }
+    void adoptPet(Animal pet) {
+
+        pets.add(pet);
+
+        // System.out.println(pets.size());
     }
 
     void makeAllSounds() {
-        for (int i = 0; i < homeAnimals.size(); i++) {
-            homeAnimals.get(i).sounds();
-        }
 
+
+        for (Animal i : pets) {
+            if (i instanceof Dog){
+                System.out.println("Dog barks");
+        }else if (i instanceof Cat){
+                System.out.println("Cat meows");
+            }else {
+                System.out.println("No animals here");}
+        }
     }
 }

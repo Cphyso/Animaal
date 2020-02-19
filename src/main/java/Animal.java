@@ -1,14 +1,25 @@
 public class Animal {
 
-    private String name;
+        private String name;
 
-    public Animal(String name){
-        this.name = name;
-    }
-    protected String sounds() {
-        return "sounds...";
-    }
-    protected String eat() {
-        return "Food";
-    }
+        void sound(){
+
+            System.out.println();
+        }
+
+        void eat() {
+
+            System.out.println(name + " eats");
+
+        }
+
+        public String getName(){
+            return name;
+        }
+
+        public void setName(String newName){
+            this.name = newName;
+        }
+
+
 }
